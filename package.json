@@ -1,0 +1,57 @@
+{
+  "name": "sqlfluff-buttons",
+  "displayName": "SQLFluff Lint/Fix Button",
+  "description": "Adds two buttons to lint or fix the active file using SQLFluff.",
+  "version": "0.0.1",
+  "publisher": "cms",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": [
+    "onCommand:sqlfluff.lintFile",
+    "onCommand:sqlfluff.fixFile"
+  ],
+  "main": "./extension.js",
+
+  "contributes": {
+    "commands": [
+      {
+        "command": "sqlfluff.lintFile",
+        "title": "Lint File",
+        "icon": {
+          "light": "media/lint-light.svg",
+          "dark": "media/lint-dark.svg"
+        }
+      },
+      {
+        "command": "sqlfluff.fixFile",
+        "title": "Fix File",
+        "icon": {
+          "light": "media/fix-light.svg",
+          "dark": "media/fix-dark.svg"
+        }
+      }
+    ],
+
+    "submenus": [
+      {
+        "id": "sqlfluff.dropdown",
+        "label": "SQLFluff Actions"
+      }
+    ],
+
+    "menus": {
+      "editor/title": [
+        {
+          "command": "sqlfluff.lintFile",
+          "group": "navigation@1"
+        },
+        {
+          "command": "sqlfluff.fixFile",
+          "group": "navigation@2"
+        }
+      ]
+    }
+  }
+}
