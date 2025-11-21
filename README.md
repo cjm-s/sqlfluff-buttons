@@ -1,12 +1,16 @@
-# SQLFluff Lint Button
+# SQLFluff Buttons
 
-This extension adds a button to the editor title bar.  
-Clicking it runs sqlfluff commands in the integrated terminal.
+This extension adds two buttons to the editor title bar.  
+Clicking them runs sqlfluff commands in the integrated terminal.
 
-### How to Run the Extension
+### How to Install the Extension
 
-1. Open this folder in VS Code  
-2. Press **F5**  
-3. A new VS Code window opens (Extension Development Host)  
-4. Open a file  
-5. Click the **SQLFluff Lint File** button (top-right)
+1. Download the sqlfluff-button `.vsix` file
+2. In VS Code, navigate to **Extensions: Install from VSIX**
+3. Choose the downloaded file and install
+
+
+### How to Use the Extension
+
+1. With a `.sql` file open in the editor, click either the magnifying glass to lint the file, or the magic wand to fix the file
+2. The relevant sqlfluff command will run in the integrated terminal in VS Code
